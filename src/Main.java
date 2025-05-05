@@ -46,17 +46,31 @@ public class Main {
          //   System.out.println("Ce n'est pas une année bissextile");
         //}
 
+        // Exo nombre de jours dans un mois
+
+        //System.out.print("Entrer le mois: ");
+        //int month = scanner.nextInt();
+
+
+        //int days = switch (month) {
+          //  case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            //case 4, 6, 9, 11 -> 30;
+            //case 2 -> 28;
+            //default -> -1; // au cas où le mois est invalide
+        //};
+
+
+        //System.out.println("Ce mois a " + days + " jours.");
+
         System.out.print("Entrer le mois: ");
-        int month = scanner.nextInt();
+        String month = scanner.nextLine().toLowerCase();
 
-
-        int days = switch (month) {
-            case 1, 3, 5, 7, 8, 10, 12 -> 31;
-            case 4, 6, 9, 11 -> 30;
-            case 2 -> 28;
-            default -> -1; // au cas où le mois est invalide
+        String days = switch (month) {
+        case "january", "march", "may", "july", "august", "october", "december" -> "31";
+        case "april", "june", "september", "november" -> "30";
+        case "february" -> "28";
+        default -> "Unknown month"; // au cas où le mois est invalide
         };
-
 
         System.out.println("Ce mois a " + days + " jours.");
 
