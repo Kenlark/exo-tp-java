@@ -106,10 +106,15 @@ public class Main {
 
         // For jusqu'a 100
 
-        for (int i = 0; i <= 100; i++) {
-            System.out.println(i);
-        }
+       // for (int i = 0; i <= 100; i++) {
+         //   System.out.println(i);
+        //}
 
+        // Exo afficher les codes des caractères des nombres 1 à 255
+
+        for (int i = 1; i <= 255; i++) {
+            System.out.println("Code: " + i + " -> Caractère: " + (char)i);
+        }
 
     }
 }
