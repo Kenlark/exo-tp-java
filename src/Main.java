@@ -37,13 +37,28 @@ public class Main {
 
         // Exo année bissextile
 
-        System.out.print("Entrer l'année : ");
-        int year = scanner.nextInt();
+        // System.out.print("Entrer l'année : ");
+        // int year = scanner.nextInt();
 
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println("C'est une année bissextile");
-        } else {
-            System.out.println("Ce n'est pas une année bissextile");
-        }
+        //if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+          //  System.out.println("C'est une année bissextile");
+        //} else {
+         //   System.out.println("Ce n'est pas une année bissextile");
+        //}
+
+        System.out.print("Entrer le mois: ");
+        int month = scanner.nextInt();
+
+
+        int days = switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 4, 6, 9, 11 -> 30;
+            case 2 -> 28;
+            default -> -1; // au cas où le mois est invalide
+        };
+
+
+        System.out.println("Ce mois a " + days + " jours.");
+
     }
 }
