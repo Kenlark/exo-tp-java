@@ -84,21 +84,32 @@ public class Main {
         //System.out.println("Ce mois a " + days + " jours.");
 
 
-        System.out.print("Entrer le mois: ");
-        String month = scanner.nextLine().toLowerCase();
+        // Exo années string leap
 
-        String days = switch (month) {
-            case "january", "march", "may", "july", "august", "october", "december" -> "31";
-            case "april", "june", "september", "november" -> "30";
-            case "february" -> {
-                System.out.print("Entrer l'année: ");
-                int year = scanner.nextInt();
+        //System.out.print("Entrer le mois: ");
+        //String month = scanner.nextLine().toLowerCase();
+
+        //String days = switch (month) {
+          //  case "january", "march", "may", "july", "august", "october", "december" -> "31";
+            //case "april", "june", "september", "november" -> "30";
+            //case "february" -> {
+                //System.out.print("Entrer l'année: ");
+              //  int year = scanner.nextInt();
                 // Vérifier si l'année est bissextile
-                yield isLeapYear(year) ? "29" : "28";  // Utilisation de yield pour renvoyer la valeur
-            }
-            default -> "Unknown month"; // au cas où le mois est invalide
-        };
+                //yield isLeapYear(year) ? "29" : "28";  // Utilisation de yield pour renvoyer la valeur
+           // }
+            //default -> "Unknown month"; // au cas où le mois est invalide
+        //};
 
-        System.out.println("Ce mois a " + days + " jours.");
+        //System.out.println("Ce mois a " + days + " jours.");
+
+
+        // For jusqu'a 100
+
+        for (int i = 0; i <= 100; i++) {
+            System.out.println(i);
+        }
+
+
     }
 }
