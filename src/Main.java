@@ -112,9 +112,26 @@ public class Main {
 
         // Exo afficher les codes des caractères des nombres 1 à 255
 
-        for (int i = 1; i <= 255; i++) {
-            System.out.println("Code: " + i + " -> Caractère: " + (char)i);
-        }
+        //for (int i = 1; i <= 255; i++) {
+          //  System.out.println("Code: " + i + " -> Caractère: " + (char)i);
+        //}
+
+
+        // Exo echange de valeurs
+
+        int a = 5;
+        int b = 10;
+
+        // Afficher avant l'échange
+        System.out.println("Avant l'échange: a = " + a + ", b = " + b);
+
+        // Échange des valeurs
+        int temp = a;
+        a = b;
+        b = temp;
+
+        // Afficher après l'échange
+        System.out.println("Après l'échange: a = " + a + ", b = " + b);
 
     }
 }
