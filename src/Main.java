@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
+
+
 public class Main {
+
+    public static boolean isLeapYear(int year) {
+        return (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+    }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -60,19 +67,38 @@ public class Main {
         //};
 
 
+        // Exo nombre de jours String
+
         //System.out.println("Ce mois a " + days + " jours.");
+
+        //System.out.print("Entrer le mois: ");
+        //String month = scanner.nextLine().toLowerCase();
+
+        //String days = switch (month) {
+        //case "january", "march", "may", "july", "august", "october", "december" -> "31";
+        //case "april", "june", "september", "november" -> "30";
+        //case "february" -> "28";
+        //default -> "Unknown month"; // au cas où le mois est invalide
+        //};
+
+        //System.out.println("Ce mois a " + days + " jours.");
+
 
         System.out.print("Entrer le mois: ");
         String month = scanner.nextLine().toLowerCase();
 
         String days = switch (month) {
-        case "january", "march", "may", "july", "august", "october", "december" -> "31";
-        case "april", "june", "september", "november" -> "30";
-        case "february" -> "28";
-        default -> "Unknown month"; // au cas où le mois est invalide
+            case "january", "march", "may", "july", "august", "october", "december" -> "31";
+            case "april", "june", "september", "november" -> "30";
+            case "february" -> {
+                System.out.print("Entrer l'année: ");
+                int year = scanner.nextInt();
+                // Vérifier si l'année est bissextile
+                yield isLeapYear(year) ? "29" : "28";  // Utilisation de yield pour renvoyer la valeur
+            }
+            default -> "Unknown month"; // au cas où le mois est invalide
         };
 
         System.out.println("Ce mois a " + days + " jours.");
-
     }
 }
